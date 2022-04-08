@@ -51,10 +51,8 @@ public class ele : MonoBehaviour
 
     void eleJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
-            //rb.velocity = new Vector2(rb.velocity.x, jumpH * 1);
-            //rb.AddForce(Vector2.up * jumpH);
             rb.velocity = Vector2.up * jumpH;
         }
     }
