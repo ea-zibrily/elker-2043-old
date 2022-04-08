@@ -12,6 +12,7 @@ public class ele : MonoBehaviour
     [SerializeField] public float radius;
     [SerializeField] public Transform groundChecker;
     [SerializeField] public LayerMask ifIsGround;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -50,14 +51,13 @@ public class ele : MonoBehaviour
 
     void eleJump()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             //rb.velocity = new Vector2(rb.velocity.x, jumpH * 1);
             //rb.AddForce(Vector2.up * jumpH);
             rb.velocity = Vector2.up * jumpH;
         }
     }
-
     bool isGrounded()
     {
         return Physics2D.OverlapCircle(groundChecker.position, radius, ifIsGround);
@@ -67,4 +67,5 @@ public class ele : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundChecker.position, radius);
     }
+    
 }
