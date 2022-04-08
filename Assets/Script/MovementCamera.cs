@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class MovementCamera : MonoBehaviour
 {
-    public float  fs = 2f;
+    public float  fs;
     public Transform target;
+    public float yOffset;
+    public float xOffset;
 
     void Update() {
-        Vector3 newPos = new Vector3(target.position.x, target.position.y, -10f);
+        Vector3 newPos = new Vector3(target.position.x + xOffset, target.position.y + yOffset, transform.position.z);
         transform.position = Vector3.Slerp(transform.position, newPos, fs*Time.deltaTime);
     }
 }
