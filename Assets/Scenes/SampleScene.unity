@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 227502041}
   - component: {fileID: 227502045}
   m_Layer: 0
-  m_Name: Character
+  m_Name: Ele
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
