@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 227502042}
   - component: {fileID: 227502041}
   - component: {fileID: 227502045}
+  - component: {fileID: 227502046}
   m_Layer: 0
   m_Name: Ele
   m_TagString: Untagged
@@ -249,7 +250,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227502040}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.9, y: -4.005, z: 0}
+  m_LocalPosition: {x: -3.22, y: -4.005, z: 0}
   m_LocalScale: {x: 0.38382286, y: 0.38382286, z: 0.5117638}
   m_Children:
   - {fileID: 1189563907}
@@ -276,6 +277,25 @@ MonoBehaviour:
   ifIsGround:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &227502046
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227502040}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dce67bcf54d60ce4f84d8b8924997cdc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &315530648
 GameObject:
   m_ObjectHideFlags: 0

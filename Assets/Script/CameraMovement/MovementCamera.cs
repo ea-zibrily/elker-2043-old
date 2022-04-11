@@ -8,6 +8,7 @@ public class MovementCamera : MonoBehaviour
     public Transform target;
     public float yOffset;
     public float xOffset;
+    private Vector3 velo = Vector3.zero;
 
     void Update() {
         Vector3 newPos = new Vector3(target.position.x + xOffset, target.position.y + yOffset, transform.position.z);

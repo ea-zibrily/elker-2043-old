@@ -5,25 +5,33 @@ using UnityEngine.SceneManagement;
 
 public class ele : MonoBehaviour
 {
+    //EleMovement
     [SerializeField] public float speed;
     [SerializeField] public float jumpH;
     [SerializeField] public bool isDirectionRight;
-    Rigidbody2D rb;
 
+    //EleAnimation
+    string walkParameter = "walk";
+    string idleParameter = "idle";
+   
+    //Grounded
     [SerializeField] public float radius;
     [SerializeField] public Transform groundChecker;
     [SerializeField] public LayerMask ifIsGround;
 
+    //Gameobject Ref
+     Rigidbody2D myRb;
+     Animator myAnim;
+
     private void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        myRb = GetComponent<Rigidbody2D>();
+        myAnim = GetComponent<Animator>();
     }
     void Start()
     {
         print("Welcome to ELKER 2K43!");
     }
-
-    // Update is called once per frame
     void Update()
     {
         eleJump();
@@ -32,11 +40,22 @@ public class ele : MonoBehaviour
     {
         eleMovement();
     }
+
+
     void eleMovement()
     {
         float move;
         move = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(move * speed, rb.velocity.y);
+        myRb.velocity = new Vector2(move * speed, myRb.velocity.y);
+
+        if( move!= 0)
+        {
+            myAnim.SetTrigger(walkParameter);
+        }
+        else
+        {
+            myAnim.SetTrigger(idleParameter);
+        }
 
         if (move > 0 && !isDirectionRight)
         {
@@ -54,7 +73,7 @@ public class ele : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
-            rb.velocity = Vector2.up * jumpH;
+            myRb.velocity = Vector2.up * jumpH;
         }
     }
     bool isGrounded()
