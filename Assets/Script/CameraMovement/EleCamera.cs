@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class EleCamera : MonoBehaviour
 {
-    [SerializeField] public Transform ele;
+    [SerializeField] private Transform ele;
     private float smoothCam = 0.25f;
     private Vector3 offset = new Vector3(0f, 0f, -10f);
     private Vector3 velocity = Vector3.zero;
 
-    // Update is called once per frame
     void Update()
     {
         Vector3 elePosititon =  ele.position + offset;
