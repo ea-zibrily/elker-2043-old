@@ -8,11 +8,13 @@ public class ele : MonoBehaviour
     //EleMovement
     [SerializeField] public float speed;
     [SerializeField] public float jumpH;
-    [SerializeField] public bool isDirectionRight;
+    [SerializeField] public bool isDirectionRight, isJumping;
 
     //EleAnimation
     string walkParameter = "walk";
     string idleParameter = "idle";
+    string jumpParameter = "jump";
+    string landParameter = "land";
    
     //Grounded
     [SerializeField] public float radius;
@@ -74,6 +76,17 @@ public class ele : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded())
         {
             myRb.velocity = Vector2.up * jumpH;
+        }
+
+        if (!isGrounded() && !isJumping)
+        {
+            myAnim.SetTrigger(jumpParameter);
+            isJumping = true;
+        }
+        else if (isGrounded() && isJumping)
+        {
+            myAnim.SetTrigger(landParameter);
+            isJumping = false;
         }
     }
     bool isGrounded()
