@@ -14,6 +14,11 @@ public class RohoxMove : MonoBehaviour
     public float groundCheckradius;
     public LayerMask itsGround;
 
+    //WallCehcker
+    public Transform wallCheck;
+    public float wallCheckradius;
+    public LayerMask itsWall;
+
     void Start()
     {
         print("GOO ROHOXKUN");
@@ -23,7 +28,7 @@ public class RohoxMove : MonoBehaviour
     {
         transform.Translate(Vector2.right * rohoxSpeed * Time.deltaTime);
 
-        if (!ThisisGround())
+        if (!ThisisGround() || ThisisWall())
         {
             if (isDirectionRight)
             {
@@ -42,9 +47,16 @@ public class RohoxMove : MonoBehaviour
     {
         return Physics2D.OverlapCircle(groundCheck.position, groundCheckradius, itsGround);
     }
-
+    
+    bool ThisisWall()
+    {
+        return Physics2D.OverlapCircle(wallCheck.position, wallCheckradius, itsWall);
+    }
     void OnDrawGizmos()
     {
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckradius);
+        Gizmos.DrawWireSphere(wallCheck.position, wallCheckradius);
     }
+
+    
 }
