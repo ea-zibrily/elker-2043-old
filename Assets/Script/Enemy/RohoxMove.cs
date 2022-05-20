@@ -57,6 +57,5 @@ public class RohoxMove : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckradius);
         Gizmos.DrawWireSphere(wallCheck.position, wallCheckradius);
     }
-
     
 }
