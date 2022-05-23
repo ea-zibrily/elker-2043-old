@@ -8,6 +8,9 @@ TagManager:
   - wall
   - teleporter
   - Enemy
+  - Fall
+  - Checkpoint
+  - GM
   layers:
   - Default
   - TransparentFX

@@ -5,7 +5,13 @@ using UnityEngine.SceneManagement;
 public class EleHealth : MonoBehaviour
 {
     public int health;
-    //public GameObject[] healthbar;
+
+    private GameMaster gm;
+    void Start()
+    {
+        gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
+        transform.position = gm.lastCheckPointPos;
+    }
     
     void TakeDamage()
     {
@@ -26,5 +32,5 @@ public class EleHealth : MonoBehaviour
         }
     }
 
-    
+
 }
