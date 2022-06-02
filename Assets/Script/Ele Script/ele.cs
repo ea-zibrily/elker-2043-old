@@ -15,15 +15,21 @@ public class ele : MonoBehaviour
     string idleParameter = "idle";
     string jumpParameter = "jump";
     string landParameter = "land";
-   
+
     //Grounded
     [SerializeField] public float radius;
     [SerializeField] public Transform groundChecker;
     [SerializeField] public LayerMask ifIsGround;
 
+    //Grounded
+    [SerializeField] public GameObject codePanel;
+    [SerializeField] public GameObject closedSafe;
+    [SerializeField] public GameObject openedSafe;
+    public static bool isSafeOpened = false;
+
     //Gameobject Ref
-     Rigidbody2D myRb;
-     Animator myAnim;
+    Rigidbody2D myRb;
+    Animator myAnim;
 
     private void Awake()
     {
@@ -33,10 +39,22 @@ public class ele : MonoBehaviour
     void Start()
     {
         print("Welcome to ELKER 2K43!");
+        codePanel.SetActive(false);
+        closedSafe.SetActive(true);
+        openedSafe.SetActive(false);
     }
     void Update()
     {
         eleJump();
+        openLockDoor();
+
+        if (isSafeOpened)
+        {
+            codePanel.SetActive(false);
+            closedSafe.SetActive(false);
+            openedSafe.SetActive(true);
+        }
+
     }
     private void FixedUpdate()
     {
@@ -50,7 +68,7 @@ public class ele : MonoBehaviour
         move = Input.GetAxisRaw("Horizontal");
         myRb.velocity = new Vector2(move * speed, myRb.velocity.y);
 
-        if( move!= 0)
+        if (move != 0)
         {
             myAnim.SetTrigger(walkParameter);
         }
@@ -64,7 +82,7 @@ public class ele : MonoBehaviour
             transform.eulerAngles = Vector2.zero;
             isDirectionRight = true;
         }
-        else if(move < 0 && isDirectionRight)
+        else if (move < 0 && isDirectionRight)
         {
             transform.eulerAngles = Vector2.up * 180;
             isDirectionRight = false;
@@ -98,5 +116,13 @@ public class ele : MonoBehaviour
     {
         Gizmos.DrawWireSphere(groundChecker.position, radius);
     }
-    
+
+    void openLockDoor()
+    {
+        if (Input.GetKeyDown(KeyCode.R) && !isSafeOpened)
+        {
+            codePanel.SetActive(true);
+        }
+    }
+
 }
