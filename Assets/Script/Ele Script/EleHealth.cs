@@ -19,7 +19,7 @@ public class EleHealth : MonoBehaviour
     }
     void TakeDamage()
     {
-        //Time.timeScale = 0;
+        Time.timeScale = 0;
         GameOverScreen.SetActive(true);
         print("You Lose!");
     }
@@ -35,5 +35,6 @@ public class EleHealth : MonoBehaviour
     public void Ulang()
     {
          SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+         Time.timeScale = 1;
     }
 }

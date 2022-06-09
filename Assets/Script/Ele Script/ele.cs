@@ -21,7 +21,7 @@ public class ele : MonoBehaviour
     [SerializeField] public Transform groundChecker;
     [SerializeField] public LayerMask ifIsGround;
 
-    //Grounded
+    //CodePanel
     [SerializeField] public GameObject codePanel;
     [SerializeField] public GameObject closedSafe;
     [SerializeField] public GameObject openedSafe;
