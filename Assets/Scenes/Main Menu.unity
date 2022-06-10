@@ -316,7 +316,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -2.5, y: 0}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1295,7 +1295,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1, y: -0.0000038146973}
   m_SizeDelta: {x: 9.1678, y: -10.6594}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1585,7 +1585,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -2.5, y: 0}
   m_SizeDelta: {x: 5, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -1659,8 +1659,8 @@ RectTransform:
   m_Father: {fileID: 172449255}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -1, y: -0.0000038146973}
   m_SizeDelta: {x: 9.1678, y: -10.6594}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2291,7 +2291,7 @@ MonoBehaviour:
   MenuPanel: {fileID: 1141729244}
   ContinuePanel: {fileID: 1156673257}
   NewGamePanel: {fileID: 1170619799}
-  OptionsPanel: {fileID: 0}
+  OptionsPanel: {fileID: 1792621471}
   CreditsPanel: {fileID: 1992025578}
   CloseApplicationPanel: {fileID: 1565814792}
 --- !u!4 &723064457
@@ -2321,7 +2321,7 @@ GameObject:
   - component: {fileID: 751856735}
   - component: {fileID: 751856734}
   m_Layer: 5
-  m_Name: NoButton
+  m_Name: CancelButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2585,7 +2585,7 @@ GameObject:
   - component: {fileID: 830516419}
   - component: {fileID: 830516420}
   m_Layer: 5
-  m_Name: Toggle
+  m_Name: ToggleSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2923,7 +2923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 930532721}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 723064456}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OptionsButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &930532721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3325,7 +3337,7 @@ GameObject:
   - component: {fileID: 1099182241}
   - component: {fileID: 1099182240}
   m_Layer: 5
-  m_Name: YesButton
+  m_Name: ApplyButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3397,7 +3409,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 723064456}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: YesButtonNewGameClicked
+        m_MethodName: CancelButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3662,7 +3674,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: No
+  m_Text: Cancel
 --- !u!222 &1102164932
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3910,7 +3922,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1126849528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 723064456}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: OptionsButtonClicked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1126849528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7196,7 +7220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1792621472
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7717,7 +7741,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 723064456}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
-        m_MethodName: YesButtonNewGameClicked
+        m_MethodName: CancelButtonClicked
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7760,7 +7784,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Yes
+  m_Text: Apply
 --- !u!222 &1892743800
 CanvasRenderer:
   m_ObjectHideFlags: 0
