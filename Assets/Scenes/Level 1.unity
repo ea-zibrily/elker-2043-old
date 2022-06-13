@@ -168,7 +168,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &11473126
 Transform:
   m_ObjectHideFlags: 0
@@ -49345,7 +49345,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!61 &1580767043
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -49783,7 +49783,7 @@ GameObject:
   - component: {fileID: 1630116511}
   - component: {fileID: 1630116510}
   m_Layer: 0
-  m_Name: Door (1)
+  m_Name: Door 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50712,7 +50712,7 @@ GameObject:
   - component: {fileID: 1886476196}
   - component: {fileID: 1886476197}
   m_Layer: 0
-  m_Name: Door
+  m_Name: Door 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
