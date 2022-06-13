@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MenuManager : MonoBehaviour
         MenuPanel.SetActive(true);
         ContinuePanel.SetActive(false);
         NewGamePanel.SetActive(false);
+        OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
         CloseApplicationPanel.SetActive(false);
     }
@@ -33,6 +35,7 @@ public class MenuManager : MonoBehaviour
         MenuPanel.SetActive(true);
         ContinuePanel.SetActive(true);
         NewGamePanel.SetActive(false);
+        OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
         CloseApplicationPanel.SetActive(false);
     }
@@ -42,15 +45,20 @@ public class MenuManager : MonoBehaviour
         MenuPanel.SetActive(true);
         ContinuePanel.SetActive(false);
         NewGamePanel.SetActive(true);
+        OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
         CloseApplicationPanel.SetActive(false);
     }
 
-    // public void OptionsButtonClicked()
-    // {
-    //     MenuPanel.SetActive(false);
-    //     OptionsPanel.SetActive(true);
-    // }
+    public void OptionsButtonClicked()
+    {
+        MenuPanel.SetActive(true);
+        ContinuePanel.SetActive(false);
+        NewGamePanel.SetActive(false);
+        OptionsPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
+        CloseApplicationPanel.SetActive(false);
+    }
 
     public void CreditsButtonClicked()
     {
@@ -66,6 +74,7 @@ public class MenuManager : MonoBehaviour
         MenuPanel.SetActive(true);
         ContinuePanel.SetActive(false);
         NewGamePanel.SetActive(false);
+        OptionsPanel.SetActive(false);
         CreditsPanel.SetActive(false);
         CloseApplicationPanel.SetActive(false);
     }
@@ -77,7 +86,7 @@ public class MenuManager : MonoBehaviour
 
     public void YesButtonNewGameClicked()
     {
-        Application.LoadLevel("Level 2");
+        Application.LoadLevel("Level 1");
     }
 
     public void YesButtonQuitGameClicked()
@@ -85,11 +94,17 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
     
-    // public void NoButtonClicked()
-    // {
-    //     MenuPanel.SetActive(true);
-    //     ContinuePanel.SetActive(false);
-    // }
+    public void CancelButtonClicked()
+    {
+        MenuPanel.SetActive(true);
+        ContinuePanel.SetActive(false);
+        NewGamePanel.SetActive(false);
+        OptionsPanel.SetActive(false);
+        CreditsPanel.SetActive(false);
+        CloseApplicationPanel.SetActive(false);
+
+        // music.volume = 0.5f;
+    }
 
     void QuitApplication()
     {
@@ -98,6 +113,8 @@ public class MenuManager : MonoBehaviour
             MenuPanel.SetActive(true);
             ContinuePanel.SetActive(false);
             NewGamePanel.SetActive(false);
+            OptionsPanel.SetActive(false);
+            CreditsPanel.SetActive(false);
             CloseApplicationPanel.SetActive(true);
         }
     }
