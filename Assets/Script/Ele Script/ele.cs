@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ele : MonoBehaviour
 {
     //EleMovement
-    [SerializeField] public float speed;
+    [SerializeField] public float speed = 0.5f;
     [SerializeField] public float jumpH;
     [SerializeField] public bool isDirectionRight, isJumping;
 
