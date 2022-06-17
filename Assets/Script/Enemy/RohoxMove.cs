@@ -8,13 +8,12 @@ public class RohoxMove : MonoBehaviour
     public float rohoxSpeed;
     public bool isDirectionRight;
 
-
     //GroundChecker
     public Transform groundCheck;
     public float groundCheckradius;
     public LayerMask itsGround;
 
-    //WallCehcker
+    //WallChecker
     public Transform wallCheck;
     public float wallCheckradius;
     public LayerMask itsWall;
@@ -26,7 +25,7 @@ public class RohoxMove : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector2.right * rohoxSpeed * Time.deltaTime);
+        transform.Translate(Vector2.left * rohoxSpeed * Time.deltaTime);
 
         if (!ThisisGround() || ThisisWall())
         {

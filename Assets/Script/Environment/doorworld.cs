@@ -10,12 +10,13 @@ public class doorworld : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Interact();
+            //Interact();
         }
     }
-
+    /*
     public void Interact()
     {
         GameMaster.transitionPlayer(target.transform.position);
     }
+    */
 }

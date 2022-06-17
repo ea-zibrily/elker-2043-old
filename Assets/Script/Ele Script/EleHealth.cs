@@ -14,8 +14,11 @@ public class EleHealth : MonoBehaviour
     }
     void Start()
     {
+        /*
         gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         transform.position = gm.lastCheckPointPos;
+        */
+        
     }
     void TakeDamage()
     {

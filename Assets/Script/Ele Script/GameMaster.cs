@@ -25,7 +25,7 @@ public class GameMaster : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+   /*
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
@@ -58,4 +58,6 @@ public class GameMaster : MonoBehaviour
 
         fader.gameObject.SetActive(false);
     }
+   */
+    
 }

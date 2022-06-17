@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
@@ -79,14 +80,17 @@ public class MenuManager : MonoBehaviour
         CloseApplicationPanel.SetActive(false);
     }
 
+    /*
     public void YesButtonContinueClicked()
     {
         Application.LoadLevel("Level 1");
     }
+    */
 
     public void YesButtonNewGameClicked()
     {
-        Application.LoadLevel("Level 1");
+        SceneManager.LoadScene("Level 2");
+        //Application.LoadLevel("Level 1");
     }
 
     public void YesButtonQuitGameClicked()

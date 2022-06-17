@@ -42,11 +42,11 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
-  - logo: {fileID: 21300000, guid: 08335ad7559060842926d1264da739d2, type: 3}
+  - logo: {fileID: 21300000, guid: 93db2e644b5597449ab6b7e2ec02e7f6, type: 3}
     duration: 2
-  - logo: {fileID: 21300000, guid: b9b4b9d1e49df2642a47ba011d9574a6, type: 3}
+  - logo: {fileID: 21300000, guid: 16bfdb182e58aa34188d7996557867a4, type: 3}
     duration: 2
-  - logo: {fileID: 21300000, guid: ef2c1dc37953f64449e2ecdaf4ed2d64, type: 3}
+  - logo: {fileID: 21300000, guid: 7099fece6d53a6e42aea231225b89eca, type: 3}
     duration: 2
   m_VirtualRealitySplashScreen: {fileID: 0}
   m_HolographicTrackingLossScreen: {fileID: 0}
@@ -84,7 +84,7 @@ PlayerSettings:
   androidFullscreenMode: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   captureSingleScreen: 0
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
@@ -96,7 +96,7 @@ PlayerSettings:
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
   useFlipModelSwapchain: 1
-  resizableWindow: 0
+  resizableWindow: 1
   useMacAppStoreValidation: 0
   macAppStoreCategory: public.app-category.games
   gpuSkinning: 0
@@ -274,7 +274,14 @@ PlayerSettings:
   AndroidMinifyDebug: 0
   AndroidValidateAppBundleSize: 1
   AndroidAppBundleSizeToValidate: 150
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 00d232ee4e958a142a063fd1e8ee5099, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching: []
   m_BuildTargetGraphicsJobs:

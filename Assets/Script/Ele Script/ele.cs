@@ -23,8 +23,10 @@ public class ele : MonoBehaviour
 
     //CodePanel
     [SerializeField] public GameObject codePanel;
+    /*
     [SerializeField] public GameObject closedSafe;
     [SerializeField] public GameObject openedSafe;
+    */
     public static bool isSafeOpened = false;
 
     //Gameobject Ref
@@ -40,8 +42,10 @@ public class ele : MonoBehaviour
     {
         print("Welcome to ELKER 2K43!");
         codePanel.SetActive(false);
+        /*
         closedSafe.SetActive(true);
         openedSafe.SetActive(false);
+        */
     }
     void Update()
     {
@@ -51,8 +55,6 @@ public class ele : MonoBehaviour
         if (isSafeOpened)
         {
             codePanel.SetActive(false);
-            closedSafe.SetActive(false);
-            openedSafe.SetActive(true);
         }
 
     }
@@ -117,12 +119,18 @@ public class ele : MonoBehaviour
         Gizmos.DrawWireSphere(groundChecker.position, radius);
     }
 
+    
     void openLockDoor()
     {
         if (Input.GetKeyDown(KeyCode.R) && !isSafeOpened)
         {
             codePanel.SetActive(true);
         }
+        else if (Input.GetKeyDown(KeyCode.Escape) && !isSafeOpened)
+        {
+            codePanel.SetActive(false);
+        }
     }
+    
 
 }
