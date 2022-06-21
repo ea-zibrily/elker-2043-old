@@ -5,6 +5,10 @@ using UnityEngine;
 public class LockDoorAnimation : MonoBehaviour
 {
     public GameObject lockpopup;
+    public GameObject openLight;
+    public GameObject closeLight;
+    public GameObject leveldone;
+
     Animator myAnime;
     private void Awake()
     {
@@ -26,5 +30,22 @@ public class LockDoorAnimation : MonoBehaviour
     private void OnTriggerExit2D(Collider2D other)
     {
         lockpopup.SetActive(false);
+    }
+
+    void OpenDoorLight()
+    {
+        closeLight.SetActive(false);
+        openLight.SetActive(true);
+    }
+
+    void levelDone()
+    {
+        Invoke("ezlevel", 1f);
+    }
+
+    void ezlevel()
+    {
+        leveldone.SetActive(true);
+        Time.timeScale = 0;
     }
 }

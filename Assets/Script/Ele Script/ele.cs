@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ele : MonoBehaviour
 {
     //EleMovement
-    [SerializeField] public float speed = 0.5f;
+    [SerializeField] public float speed = 12f;
     [SerializeField] public float jumpH;
     [SerializeField] public bool isDirectionRight, isJumping;
 
@@ -79,6 +79,20 @@ public class ele : MonoBehaviour
             myAnim.SetTrigger(idleParameter);
         }
 
+        //Playermove v1
+        if(move > 0 && !isDirectionRight)
+        {
+            gameObject.transform.localScale = new Vector2(0.4251537f, gameObject.transform.localScale.y);
+            isDirectionRight = true;
+        }
+        if (move < 0 && isDirectionRight)
+        {
+            gameObject.transform.localScale = new Vector2(-0.4251537f, gameObject.transform.localScale.y);
+            isDirectionRight = false;
+        }
+
+        /*
+        //Playermove v2
         if (move > 0 && !isDirectionRight)
         {
             transform.eulerAngles = Vector2.zero;
@@ -89,6 +103,7 @@ public class ele : MonoBehaviour
             transform.eulerAngles = Vector2.up * 180;
             isDirectionRight = false;
         }
+        */
     }
 
     void eleJump()

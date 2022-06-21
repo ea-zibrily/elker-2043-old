@@ -45,7 +45,30 @@ public class scenetransition : MonoBehaviour
             SceneManager.LoadScene(0);
         });
     }
-    
+
+    public void openVid()
+    {
+        fader.gameObject.SetActive(true);
+
+        /*
+        // ALPHA
+        LeanTween.alpha (fader, 0, 0);
+        LeanTween.alpha (fader, 1, 0.5f).setOnComplete (() => 
+        {
+            //Example for little pause before laoding the next scene
+            SceneManager.LoadScene(1);
+        });
+        */
+
+
+        // SCALE
+        LeanTween.scale(fader, Vector3.zero, 0.5f);
+        LeanTween.scale(fader, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
+            // Example for little pause before laoding the next scene
+            SceneManager.LoadScene(1);
+        });
+
+    }
 
     public void OpenLvl2Scene()
     {
@@ -66,7 +89,7 @@ public class scenetransition : MonoBehaviour
         LeanTween.scale(fader, Vector3.zero, 0.5f);
         LeanTween.scale(fader, new Vector3(1, 1, 1), 1.5f).setEase(LeanTweenType.easeInOutQuad).setOnComplete(() => {
             // Example for little pause before laoding the next scene
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
         });
         
     }
@@ -98,7 +121,7 @@ public class scenetransition : MonoBehaviour
 
     private void Admin1()
     {
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 }
     /*

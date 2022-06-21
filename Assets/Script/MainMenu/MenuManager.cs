@@ -89,7 +89,7 @@ public class MenuManager : MonoBehaviour
 
     public void YesButtonNewGameClicked()
     {
-        SceneManager.LoadScene("Level 2");
+        SceneManager.LoadScene("Video Story");
         //Application.LoadLevel("Level 1");
     }
 

@@ -37,9 +37,4 @@ public class accessComputer : MonoBehaviour
             inPC = false;
         }
     }
-
-    public void closeComputer()
-    {
-        hackPanel.SetActive(false);
-    }
 }
