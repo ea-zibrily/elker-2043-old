@@ -3756,8 +3756,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   codePanel: {fileID: 1526128475}
-  closedSafe: {fileID: 1582294949}
-  openedSafe: {fileID: 757040262}
 --- !u!95 &227502046
 Animator:
   serializedVersion: 3
@@ -3766,7 +3764,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 227502040}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: dce67bcf54d60ce4f84d8b8924997cdc, type: 2}
   m_CullingMode: 0
@@ -4437,7 +4435,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -4.2579956, y: 0.5809021}
+  m_AnchoredPosition: {x: -4.2579956, y: 0.5809326}
   m_SizeDelta: {x: 72.4435, y: 61.4352}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &479946416
@@ -26230,7 +26228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -219, y: 0.68629456}
+  m_AnchoredPosition: {x: -219, y: 0.6862793}
   m_SizeDelta: {x: -630.6075, y: -94.7067}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526128477
@@ -49574,6 +49572,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lockpopup: {fileID: 1207201068}
+  openLight: {fileID: 0}
+  closeLight: {fileID: 0}
+  leveldone: {fileID: 0}
 --- !u!1 &1594164802
 GameObject:
   m_ObjectHideFlags: 0
@@ -49788,7 +49789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1630116510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50717,7 +50718,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1886476193
 Animator:
   serializedVersion: 3
